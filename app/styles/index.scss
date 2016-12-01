@@ -1,23 +1,72 @@
+$teal: #00ced1;
+$green: #9acd32;
+$grey: #ccc;
+$yellow: #ffff00;
+$orange: #ffa500;
+$pink: #e47ae9;
+$purple: #68228B;
+
+$padding: 5px;
+
 p {
   text-align: center;
 }
+
 img {
-  width: 17vw;
+  width: 144px;
+  height: 144px;
   margin-top: 5vh;
 }
+
 h1 {
   font-weight: 700;
   font-size: 6vw;
 }
+
 a {
-  color: #642D8D;
+  color: $purple;
 }
-.site {
-  font-weight: 600;
+
+#site {
+  color: $purple;
+  font-weight: 900;
+}
+
+#social {
+  & .icon{
+    width: 44px;
+    height: 44px;
+    &#instagram {
+      background: url("../images/social-icons.gif") 0 0;
+    }
+    &#facebook {
+      background: url("../images/social-icons.gif") 0 44px;
+    }
+    &#email {
+      background: url("../images/social-icons.gif") 0 88px;
+    }
+  }
+}
+
+#dots {
+  margin-top: $padding;
+  & .dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 1px;
+    &.teal{ background-color: $teal; }
+    &.green{ background-color: $green; }
+    &.light-grey{ background-color: $grey; }
+    &.yellow{ background-color: $yellow; }
+    &.orange{ background-color: $orange; }
+    &.pink{ background-color: $pink; }
+  }
 }
 
 html, body {
   background-color: #ffffff;
-  font-family: 'Work Sans', sans-serif;
-  color: #642D8D;
+  font-family: "Work Sans", sans-serif;
+  color: $purple;
 }
